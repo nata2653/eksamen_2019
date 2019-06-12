@@ -93,10 +93,18 @@ font-style: italic;
 /*interaktiv kop*/
 
 .interaktiv-kop {
-    max-width: 400px;
+    max-width: 80%;
     position: relative;
     margin: 0 auto;
-    padding: 100px;
+    padding: 50px 50px 120px 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.hide {
+    display: none;
 }
 
 .interaktiv-kop img {
@@ -104,41 +112,62 @@ font-style: italic;
     max-width: 400px;
 }
 
+.info-txt {
+    font-size: 1.5em;
+    max-width: 600px;
+    padding-left: 150px;
+}
+
+strong {
+    font-size: 1.4em;
+    line-height: 1.5;
+}
+
 .text {
     font-size: 1.5em;
-    padding: 10px;
+    max-width: 600px;
+    padding-left: 150px;
 }
 
 .hank {
     position: absolute;
-    top: 200px;
-    left: 460px;
+    top: 160px;
+    left: 410px;
 }
 
 .maling {
     position: absolute;
     top: 240px;
-    left: 270px;
+    left: 230px;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 300;
 }
 
 .ler {
     position: absolute;
-    top: 120px;
-    left: 180px;
+    top: 70px;
+    left: 130px;
 }
 
 .brand {
     position: absolute;
-    top: 110px;
-    left: 340px;
+    top: 60px;
+    left: 280px;
 }
 
 .dot {
     width: 40px;
     height: 40px;
-    background: #AB9A9A;
+    background-color: rgba(89, 81, 77);
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: 5px 2px 4px 1px rgba(128, 128, 128, 0.47);
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: whitesmoke;
 }
 
 button:hover {
@@ -162,7 +191,129 @@ p {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1098px) {
+    .hank {
+        position: absolute;
+        top: 160px;
+        left: 410px;
+    }
 
+    .maling {
+        position: absolute;
+        top: 270px;
+        left: 230px;
+    }
+
+    .ler {
+        position: absolute;
+        top: 100px;
+        left: 130px;
+    }
+
+    .brand {
+        position: absolute;
+        top: 90px;
+        left: 280px;
+    }
+
+}
+
+@media screen and (max-width: 1035px) {
+    .hank {
+        position: absolute;
+        top: 190px;
+        left: 410px;
+    }
+
+    .maling {
+        position: absolute;
+        top: 290px;
+        left: 230px;
+    }
+
+    .ler {
+        position: absolute;
+        top: 120px;
+        left: 130px;
+    }
+
+    .brand {
+        position: absolute;
+        top: 120px;
+        left: 280px;
+    }
+
+}
+
+@media screen and (max-width: 976px) {
+    .hank {
+        position: absolute;
+        top: 250px;
+        left: 410px;
+    }
+
+    .maling {
+        position: absolute;
+        top: 350px;
+        left: 230px;
+    }
+
+    .ler {
+        position: absolute;
+        top: 170px;
+        left: 130px;
+    }
+
+    .brand {
+        position: absolute;
+        top: 160px;
+        left: 280px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .interaktiv-kop {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .info-txt {
+        padding-left: 0px;
+        padding-top: 40px;
+    }
+
+    .text {
+        padding-left: 0px;
+    }
+
+    .hank {
+        position: absolute;
+        top: 150px;
+        left: 550px;
+    }
+
+    .maling {
+        position: absolute;
+        top: 250px;
+        left: 350px;
+    }
+
+    .ler {
+        position: absolute;
+        top: 70px;
+        left: 260px;
+    }
+
+    .brand {
+        position: absolute;
+        top: 60px;
+        left: 390px;
+    }
+
+    .kurser-container1 img {
+        width: 300px;
+    }
+}
 
 
 /*Logo animation*/
@@ -308,12 +459,11 @@ h1 {
 .desktop-nav {
     position: fixed;
     top: 0;
-    padding: 2em;
+    padding: 1em;
     width: 100%;
     max-width: 100vw;
     text-align: center;
     z-index: 998;
-
 }
 
 .desktop-nav a {

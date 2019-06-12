@@ -111,34 +111,45 @@
             </div>
         </template>
         <div class="info">
-            <h1>kursets forløb</h1>
-            <p>Klik på prikkerne på koppen og læs mere om de forskellige ting, der laves på kurset. </p>
+            <h1>Hvad laver man på keramik kurset?</h1>
         </div>
         <div class="interaktiv-kop">
             <img src="kop-interaktiv.svg" alt="kop">
-            <button class="ler dot"></button>
-            <div class="text">
-                <p class="ler-txt hidden">Det første i lærer på kurset er, at forme leret til hvad i ønsker. Det kan f.eks. være en vase, kop eller lign.
-                    Vi vil fokusere på at dreje leret på drejeskiven og bruge forskellige teknikker og metoder, alt efter om i ønsker runde eller hårde kanter. Den første dag vil vi øve og øve os og den anden dag vil i lave jeres færdige produkt.
-                </p>
-            </div>
 
-            <button class="brand dot"></button>
-            <div class="text">
-                <p class="brand-txt hidden">Efter at i har formet jeres ler, vil jeg brænde den for jer i min keramikovn. Her bliver jeres unikke design lavet til et rigtigt produkt, som i kan komme og hente efter ca. 14 dage og tage med hjem.
-                </p>
-            </div>
+            <p class="info-txt hide">
+                Kør musen henover prikkerne på koppen og læs mere om de forskellige ting, der laves på kurset.
+            </p>
 
-            <button class="maling dot"></button>
-            <div class="text">
-                <p class="maling-txt hidden">Jeg vil glasere jeres keramiske produkt, efter jeres ønsker. Her har i muligheden for at sætte det sidste personlige præg og skabe noget unika keramik, lige efter jeres ønske.
-                </p>
-            </div>
+            <button class="ler dot">1</button>
 
-            <button class="hank dot"></button>
-            <div class="text">
-                <p class="hank-txt hidden">Hanken påsættes efter at leret har været på drejeskiven og er blevet formet. Denne hank kan i dekorere og placere hvor end i vil, såfremt der er behov for en hank på jeres produkt. </p>
-            </div>
+            <p class="ler-txt text hidden">
+                <strong>Ler</strong> <br>
+                Det første du vil lære på dette keramik kursus er, hvordan man former lertøjet. Det kan f.eks. være en keramik vase, keramik krus eller lign.
+                Du vil lære hvordan man drejer leret på drejeskiven og bruge forskellige teknikker og metoder, alt efter om du ønsker runde eller hårde kanter.
+            </p>
+
+
+            <button class="brand dot">2</button>
+
+            <p class="brand-txt text hidden">
+                <strong>Brænding</strong> <br>
+                Efter at du har formet dit ler, vil jeg brænde den for dig i min keramikovn. Her bliver dit unika design lavet til et fast kunsthåndværk, som du kan komme og hente i mit keramikværksted efter ca. 14 dage og tage med hjem.
+            </p>
+
+
+            <button class="maling dot">3</button>
+            <p class="maling-txt text hidden">
+                <strong>Glasur</strong> <br>
+                Glasuren på din keramik er det sidste touch. Dette vil jeg glasere for dig, efter dit ønske. Du har altså muligheden for at sætte dit personlige præg på dit kunsthåndværk og skabe noget unika keramik, det passer perfekt ind i indretning af stuen eller som en personlig gave.
+            </p>
+
+
+            <button class="hank dot">4</button>
+            <p class="hank-txt text hidden">
+                <strong>Hank</strong> <br>
+                Hanken påsættes efter at leret har været på drejeskiven og er blevet formet. Denne hank kan du dekorere og placere hvor end du vil på enten dit håndlavede brugskunst eller på din nye vase. Det er helt op til dig selv om der skal være en hank eller ej.
+            </p>
+
         </div>
         <div class="kurser-container1">
             <img src="billede12.jpg" alt="Lene-på-drejeskiven">
@@ -203,48 +214,71 @@
     <script>
         document.addEventListener("DOMContentLoaded", sidenVises);
 
+        let infoTekst = document.querySelector(".info-txt");
         let hankTekst = document.querySelector(".hank-txt");
         let malingTekst = document.querySelector(".maling-txt");
         let lerTekst = document.querySelector(".ler-txt");
         let brandTekst = document.querySelector(".brand-txt");
 
         function sidenVises() {
+
             console.log("Siden vises");
-            document.querySelector(".hank").addEventListener("click", visTxtHank);
-            document.querySelector(".maling").addEventListener("click", visTxtMaling);
-            document.querySelector(".ler").addEventListener("click", visTxtLer);
-            document.querySelector(".brand").addEventListener("click", visTxtBrand);
+
+            document.querySelector(".info-txt").classList.remove("hide");
+            document.querySelector(".hank").addEventListener("mouseover", visTxtHank);
+            document.querySelector(".hank").addEventListener("mouseout", visTxtHank);
+
+            document.querySelector(".maling").addEventListener("mouseover", visTxtMaling);
+            document.querySelector(".maling").addEventListener("mouseout", visTxtMaling);
+            document.querySelector(".ler").addEventListener("mouseover", visTxtLer);
+            document.querySelector(".ler").addEventListener("mouseout", visTxtLer);
+            document.querySelector(".brand").addEventListener("mouseover", visTxtBrand);
+            document.querySelector(".brand").addEventListener("mouseout", visTxtBrand);
         }
 
         function visTxtHank() {
             if (hankTekst.classList.contains("hidden")) {
                 hankTekst.classList.remove("hidden");
+                infoTekst.classList.add("hide");
             } else {
                 hankTekst.classList.add("hidden");
+                infoTekst.classList.remove("hide");
             }
         }
 
         function visTxtMaling() {
             if (malingTekst.classList.contains("hidden")) {
                 malingTekst.classList.remove("hidden");
+                infoTekst.classList.add("hide");
+
             } else {
                 malingTekst.classList.add("hidden");
+                infoTekst.classList.remove("hide");
+
             }
         }
 
         function visTxtLer() {
             if (lerTekst.classList.contains("hidden")) {
                 lerTekst.classList.remove("hidden");
+                infoTekst.classList.add("hide");
+
             } else {
                 lerTekst.classList.add("hidden");
+                infoTekst.classList.remove("hide");
+
             }
         }
 
         function visTxtBrand() {
             if (brandTekst.classList.contains("hidden")) {
                 brandTekst.classList.remove("hidden");
+                infoTekst.classList.add("hide");
+
             } else {
                 brandTekst.classList.add("hidden");
+                infoTekst.classList.remove("hide");
+
             }
         }
     </script>
