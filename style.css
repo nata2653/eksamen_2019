@@ -191,6 +191,17 @@ p {
     margin: 0 auto;
 }
 
+.kurser-container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 0px 100px;
+}
+
+.kurser-container1 img {
+    max-width: 500px;
+}
+
 @media screen and (max-width: 1098px) {
     .hank {
         position: absolute;
@@ -1639,17 +1650,6 @@ body.light .progress-wrap svg.progress-circle path {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-}
-
-.kurser-container1 {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-items: center;
-    padding: 0px 60px;
-}
-
-.kurser-container1 img {
-    max-width: 500px;
 }
 
 .beskrivelse2 {
